@@ -7,7 +7,7 @@ import {
 export default function MobileVideoApp() {
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
-  const videoUrl = "https://www.dropbox.com/scl/fi/lyuwktu1z884rqrtrgbu7/2026-at-1030-in-the-morning..mp4?rlkey=awg79kpwn15zoov11xpmwla7a&st=7u45n6ez&dl=0&raw=1";
+  const videoUrl = "https://www.dropbox.com/scl/fi/uxkw7hp4frw3ix9ubae7m/video.mp4?rlkey=xctprly34zromihd4ky8d4wt3&st=826uq1lb&dl=0&raw=1";
 
   const handleSkip = (): void => {
     const video = videoRef.current;
