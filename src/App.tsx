@@ -1,13 +1,10 @@
-import { useState, useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useRef } from "react";
+import { motion } from "framer-motion";
 import {
-  Globe,
-  MoreHorizontal,
   FastForward,
 } from "lucide-react";
 
 export default function MobileVideoApp() {
-  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
   const videoUrl = "https://www.dropbox.com/scl/fi/lyuwktu1z884rqrtrgbu7/2026-at-1030-in-the-morning..mp4?rlkey=awg79kpwn15zoov11xpmwla7a&st=125nucn6&dl=0&raw=1";
@@ -80,54 +77,7 @@ export default function MobileVideoApp() {
             />
           </motion.div>
 
-          <div className="pr-4 sm:pr-6 mt-4 relative">
-            <button
-              onClick={() => setIsMenuOpen((prev) => !prev)}
-              className={`p-2.5 sm:p-3 rounded-full backdrop-blur-xl border transition-all duration-200 ${isMenuOpen
-                ? "bg-white text-black border-white"
-                : "bg-black/40 text-white border-white/10 hover:bg-black/60"
-                }`}
-            >
-              <MoreHorizontal size={20} />
-            </button>
 
-            <AnimatePresence>
-              {isMenuOpen && (
-                <motion.div
-                  initial={{ opacity: 0, y: -10, scale: 0.95 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  exit={{ opacity: 0, y: -10, scale: 0.95 }}
-                  transition={{ duration: 0.15 }}
-                  className="
-                    absolute
-                    right-0
-                    top-14
-                    w-48
-                    sm:w-56
-                    bg-slate-950/95
-                    backdrop-blur-2xl
-                    rounded-3xl
-                    border
-                    border-sky-500/20
-                    overflow-hidden
-                    shadow-2xl
-                  "
-                >
-                  <div className="p-2">
-                    <a
-                      href="https://318-template.vercel.app/"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="flex items-center gap-3 px-4 py-4 rounded-2xl hover:bg-white/10 transition-colors"
-                    >
-                      <Globe size={20} className="text-sky-400" />
-                      <span className="text-sm sm:text-base">Website</span>
-                    </a>
-                  </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
         </header>
 
         {/* Video Area */}
