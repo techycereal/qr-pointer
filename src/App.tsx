@@ -10,7 +10,7 @@ export default function MobileVideoApp() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
-  const videoUrl = "https://www.dropbox.com/scl/fi/lyuwktu1z884rqrtrgbu7/2026-at-1030-in-the-morning..mp4?rlkey=awg79kpwn15zoov11xpmwla7a&st=ra8rgtsa&raw=1";
+  const videoUrl = "https://www.dropbox.com/scl/fi/lyuwktu1z884rqrtrgbu7/2026-at-1030-in-the-morning..mp4?rlkey=awg79kpwn15zoov11xpmwla7a&st=125nucn6&dl=0&raw=1";
 
   const handleSkip = (): void => {
     const video = videoRef.current;
@@ -84,8 +84,8 @@ export default function MobileVideoApp() {
             <button
               onClick={() => setIsMenuOpen((prev) => !prev)}
               className={`p-2.5 sm:p-3 rounded-full backdrop-blur-xl border transition-all duration-200 ${isMenuOpen
-                  ? "bg-white text-black border-white"
-                  : "bg-black/40 text-white border-white/10 hover:bg-black/60"
+                ? "bg-white text-black border-white"
+                : "bg-black/40 text-white border-white/10 hover:bg-black/60"
                 }`}
             >
               <MoreHorizontal size={20} />
